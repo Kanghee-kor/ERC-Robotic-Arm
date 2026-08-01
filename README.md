@@ -3,9 +3,12 @@ Design and development of a 6-DOF robotic arm for the European Rover Challenge (
 ---
 
 # Project Overview
-The ERC Robot Arm is a multidisciplinary engineering project developed for the European Rover Challenge, an international robotic competition that simulates real-world Mars exploration missions.<br> The objective of this project is to design, manufacture and integrate a 6-degree of freedom robotic arm capable of performing a range of scientific tasks such as sample retrieval, object manipulation and drilling operations.<br>
-The project follows a complete engineering design process, beginning with mission requirements, progessing through concept development, component selection, mechanical design, engineering analysis, prototype manufacturing and feedback & design improvements.<br>
-As the Robot Arm Team Lead, I was responsible for leading the mechanical development of the arm, including motor selection, torque analysis, CAD design, manufacturing planning, technical documentation and project coordination.<br>
+The ERC Robot Arm is a multidisciplinary engineering project developed for the European Rover Challenge, an international robotic competition that simulates real-world Mars exploration missions.<br> The objective of this project is to design, manufacture and integrate a 6-degree of freedom robotic arm capable of performing a range of scientific tasks such as sample retrieval, object manipulation and drilling operations.
+
+The project follows a complete engineering design process, beginning with mission requirements, progessing through concept development, component selection, mechanical design, engineering analysis, prototype manufacturing and feedback & design improvements.
+
+As the Robot Arm Team Lead, I was responsible for leading the mechanical development of the arm, including motor selection, torque analysis, CAD design, manufacturing planning, technical documentation and project coordination.
+
 The current phase of the project focuses on completing the mechanical system using aluminium structural components before integrating embedded software. 
 
 # Competition Background
@@ -99,3 +102,113 @@ Prototype components were manufactured using PLA through 3D printing to verify p
 The prototype was assembled and evaluated to identify mechanical issues, dimensional inaccuracies and assembly challenges. Several design revisions were required before the final manufacturing stage. 
 ### 10. Final Manufacturing (In Progress)
 Following multiple design iterations, the robotic arm is currently being manufactured using aluminium structural components for the final competition version. 
+# Mechanical Design
+
+The robotic arm was designed entirely in Autodesk Fusion 360 using a modular design philosophy. Each joint and structural component was developed as an independent assembly, allowing individual parts to be modified without redesigning the entire system. The design focused on balancing structural rigidity, low weight, manufacturability, and ease of assembly.
+
+## Overall Architecture
+
+The robotic arm consists of six rotational joints, providing six degrees of freedom for manipulation tasks required in the European Rover Challenge.<br>
+
+The mechanical structure consists of aluminium extrusions, custom-designed motor housings, structural connection brackets, and a custom-designed gripper. The shoulder and elbow joints provide the primary lifting capability, while the wrist joints control the orientation of the end effector for scientific operations.<br>
+
+The modular architecture allows individual joints and components to be redesigned or replaced without affecting the remainder of the system, improving maintainability and future development.
+
+> **Figure 1.** Complete CAD model of the 6-DOF robotic arm.<br>
+
+## Cad Development
+The development began with the overall mechanical layout, followed by the detailed design of each joinnt and the overall structure. CAD designs provided by the motor manufacturers were imported directly into the assembly to ensure accurate dimensions, mounting interfaces and mechanical clearances. Standard 2020 & 3030 aluminoum extrusion profiles were also imported to represent the final structural frame accurately.
+
+All remaining mechanical components, such as the motor housings, connection brackets, structural interfaces and the gripper were designed from scratch to integrate the selected motors into the arm so that they could achieve our initial goals of the arm.
+
+Fusion 360 joint simulations were used throughout development to verify the range of motion, evaluate joint movement and identify potential mechanical interference before manufacturing. 
+
+# Torque Analysis 
+## Objective
+One of the most critical stages of the designing process was verifying whether or not the selected motors could support the robotic arm throughout its operating range. 
+
+Therefore, rather than selecting motors based entirely on manufacturer specifications, a complete static torque analysis was performed to determine the torque demand at each joint under maximum loading conditions. 
+
+This analysis was used to validate the mechanical design, identify potential failure points and guide subsequent design decisions before manufacturing. <br>
+The primary objectives of the analysis were to:
+- Verify that each motor could safely support the expected loads.
+- Determine the maximum feasible arm reach using the selected motors.
+- Idenfity the limiting joint within the mechanical system.
+- Idenfity the maximum weight the arm could withstand relative to specific arm reach.
+- Optimise the design while maintaining a lightweight structure.
+
+## Initial Design Assumptions
+The inital robotic arm was designd with the following target specifications:
+| Parameter | Value |
+|-----------|------:|
+| Initial Reach | 1.4 m |
+| Structural Mass (excluding payload) | 2.0 kg |
+| Payload | 1.0 kg |
+| Gravitational Acceleration | 9.8 m/s² |
+
+The initial design prioritised maximum operational workspace. However, there assumptions required engineering validation before detailed manufacturing could begin. 
+
+## Engineering Methodology
+
+A static torque analysis was carried out for every joint using classical rigid-body mechanics. 
+
+For every joint, the following procedure was applied: 
+1. Determine the remaining structural mass supported by the joint.
+2. Calculate the effective lever arm to the centre of mass of each component.
+3. Compute the gravitational force acting on each component.
+4. Calculate the individual torque contributions.
+5. Sum all torque contributions to determine the total required holding torque.
+6. Compare the calculated torque demand with the peak torque specifictionn of the selected motor.
+
+This sequential approach allowed each joint to be evaluated independently while accurately representing the physical loading conditions experienced during operation.
+
+## Governing Equation
+The required holding torque of each joint was calculated using the fundamental moment equation. 
+`τ = Σ(F × d)`
+
+Since force is defined as:
+
+`F = m × g`
+
+the governing equation becomes:
+
+`τ = Σ(m × g × d)`
+
+where:
+
+- **τ** = Required holding torque (Nm)
+- **m** = Mass of each component (kg)
+- **g** = Gravitational acceleration (9.81 m/s²)
+- **d** = Perpendicular distance from the joint axis to the component's centre of mass (m)
+
+
+---
+
+## Step 1 - Downstream Mass Analysis
+Rather than analysing the robotic arm as a single structure, each joint was evaluated independently by considering the components located downstream of its axis of rotation. 
+
+As the analysis progresses from the shoulder towards the end effector, both the supported mass and the effective lever arm decrease. 
+
+For example: 
+### Shoulder Joint
+Supports:
+- Link 1 (Aluminium 3030)
+- Link 2 (Aluminium 2020)
+- Wrist Assembly
+- Gripper
+- Payload
+
+### Elbow Joint
+Supports:
+- Forearm
+- Wrist Assembly
+- Gripper
+- Payload
+
+### Wrist Joint
+Supports:
+- Wrist Assembly
+- Gripper
+- Payload
+
+This methodology allowed each joint to be analysed independently while accurately modelling the physical behaviour of the robotic arm. 
