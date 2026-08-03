@@ -434,4 +434,13 @@ The aluminium version is currently planned as the final competition used assembl
 
 ---
 
+## Engineering Lessons
+
+One of the most valuable lessons from this project has been understanding that a successful CAD model does not always translate directly into a manufacturable product.
+
+Althougt the overall mechanical design was successful, the actual physical assembly exposed several problems which involved tolerance ussues, fastener access and assembly problmes. To solve these problems, multiple redesigning was necessary and it was a reminder that engineering is never completed in one try, but there is always room for feedback. 
+
+This experience strengthened my understanding of rapid prototyping, design for manufacturing and the relationship between digital design and physical implementation. 
+
+# Challenges & Solutions 
 
