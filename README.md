@@ -420,7 +420,7 @@ From those processes, the final mechanical design was significantly more detaile
 
 ---
 
-Future Manufacturing
+## Future Manufacturing
 
 Once the PLA prototype has been fully validated, the custom components will be made from aluminium. 
 
