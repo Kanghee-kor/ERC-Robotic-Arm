@@ -1,5 +1,5 @@
 # ERC 2026 - 6-DOF Robotic Arm
-> ** Role:** Robotic Arm Team Lead | Mechanical Design | CAD | Torque Analysis | Manufacturing
+> **Role:** Robotic Arm Team Lead | Mechanical Design | CAD | Torque Analysis | Manufacturing
 
 ---
 
