@@ -212,3 +212,226 @@ Supports:
 - Payload
 
 This methodology allowed each joint to be analysed independently while accurately modelling the physical behaviour of the robotic arm. 
+
+## Step 2 - Shoulder Joint Analysis
+The shoulder motor has to support the entire robotic arm together with the payload added as well. 
+
+### Components
+| Component | Mass (kg) | Distance (m) |
+|-----------|----------:|-------------:|
+| Link 1 | 0.5329 | 0.225 |
+| Remaining Structure | 1.4671 | 0.925 |
+| Payload | 1.000 | 1.400 |
+
+The total required torque is<br>
+`τ = (0.5329 x 9.81 x 0.225) + (1.4671 x 9.81 x 0.925) + (1.0 x 9.81 x 1.4)`<br>
+`τ  = 1.176 + 13.313 + 13.734`<br>
+**Required Torque = 28.223 Nm**
+| Motor Specification | Value |
+|---------------------|------:|
+| Maximum Torque | 30.0 Nm |
+| Required Torque | 28.223 Nm|
+| Safety Margin | 1.777 Nm |
+
+**Result: ** Pass<br>
+The shoulder motor operates within its maximum torque capability and provides an acceptable safety margin. 
+
+---
+
+## Joint 3 - Elbow Pitch
+The elbow supports only the downstream portion of the robotic arm. <br>
+The following componets were removed from the calculations:
+- Link 1
+- Shoulder assembly
+- Shoulder Motor mass
+### Remaining Parameters
+ Parameter | Value |
+|-----------|------:|
+| Remaining Mass | 1.205724 kg |
+| Remaining Reach | 0.95 m |
+| Centre of Mass | 0.475 m |
+| Payload Distance | 0.95 m |
+
+The required holding torque becomes<br>
+
+`τ = (1.205724 × 9.81 × 0.475) + (1.0 × 9.81 × 0.95)`<br>
+
+`τ = 5.618 + 9.319`<br>
+
+**Required Torque = 14.937 Nm**
+
+| Motor Specification | Value |
+|---------------------|------:|
+| Rated Torque | 30.0 Nm |
+| Required Torque | 14.937 Nm |
+
+**Result: ** Pass
+
+## Joint 4 – Wrist Yaw
+
+The wrist yaw actuator proved to be the limiting joint of the robotic arm.
+
+After removing all upstream components, only the wrist assembly and payload remained.
+
+### Remaining Parameters
+
+| Parameter | Value |
+|-----------|------:|
+| Remaining Mass | 0.957323 kg |
+| Effective Reach | 0.329 m |
+| Centre of Mass | 0.1645 m |
+
+The required holding torque becomes<br>
+
+`τ = (0.05 × 9.81 × 0.1645) + (1.0 × 9.81 × 0.329)`<br>
+`τ = 0.081 + 3.227`<br>
+**Required Torque = 3.308 Nm**
+
+| Motor Specification | Value |
+|---------------------|------:|
+| Peak Torque | 3.0 Nm |
+| Required Torque | 3.308 Nm |
+
+**Result: ** Fail<br>
+The calculated torque exceeds the peak torque capability of the selected motor, making the original 1.4m design mechanically infeasible. 
+
+## Joint 5 – Wrist Pitch
+
+### Remaining Parameters
+
+---
+
+| Parameter | Value |
+|-----------|------:|
+| Remaining Reach | 0.306 m |
+
+The required holding torque becomes<br>
+
+`τ = (0.00625 × 9.81 × 0.0115) + (1.0 × 9.81 × 0.306)`<br>
+
+`τ = 0.0007 + 3.002`<br>
+
+**Required Torque = 3.003 Nm**
+
+| Motor Specification | Value |
+|---------------------|------:|
+| Peak Torque | 3.0 Nm |
+| Required Torque | 3.003 Nm |
+
+**Result:** Stall Limit
+
+The motor operates almost exaclty at its maximum capability and would have little or no available torque for dynamic motion. 
+
+---
+## Joint 6 – Gripper Roll
+
+### Remaining Parameters
+
+| Parameter | Value |
+|-----------|------:|
+| Remaining Reach | 0.1975 m |
+
+The required holding torque becomes<br>
+
+`τ = (0.066235 × 9.81 × 0.0542) + (1.0 × 9.81 × 0.1975)`<br>
+
+`τ = 0.035 + 1.937`<br>
+
+**Required Torque = 1.972 Nm**
+
+| Motor Specification | Value |
+|---------------------|------:|
+| Rated Torque | 2.0 Nm |
+| Required Torque | 1.972 Nm |
+
+**Result:** Pass
+
+The motor is capable of holding the payload statically but operates at approximately 98.6% of its continuous torque limit. 
+
+## Summary of Results
+| Joint | Reach (m) | Required Torque (Nm) | Motor Capacity (Nm) | Status |
+|------|----------:|---------------------:|--------------------:|:------:|
+| Shoulder (J2) | 1.400 | 28.223 | 30.0 | PASS |
+| Elbow (J3) | 0.950 | 14.937 | 2.0 | PASS |
+| Wrist Yaw (J4) | 0.329 | 3.308 | 3.0 | FAIL |
+| Wrist Pitch (J5) | 0.306 | 3.003 | 3.0 | STALL |
+| Gripper Roll (J6) | 0.197 | 1.972 | 2.0 | PASS |
+
+## Engineering Optimisation
+
+The wrist yaw joint was identified as the primary mechanical bottleneck.
+
+Rather than replacing the actuator with a larger and heavier motor, the governing torque equation was rearranged to determine the allowable payload and maximum reach while retaining the existing actuator.
+
+### Maximum Allowable Payload
+
+`Maximum Payload = Motor Torque / (Gravity × Distance)`<br>
+
+`= 3.0 / (9.81 × 0.329)`
+
+**Maximum Payload = 0.93 kg**
+
+### Critical Reach
+
+`Maximum Reach = Motor Torque / (Payload × Gravity)`
+
+`= 3.0 / (1.0 × 9.81)`
+
+**Critical Reach = 0.306 m**
+
+To achieve a dynamic safety factor of approximately **1.3×**, the wrist assembly should be shortened from **329 mm** to approximately **235 mm**.
+
+This analysis directly influenced the final mechanical design and led to the decision to reduce the overall arm reach from **1.4 m** to **1.0 m**, ensuring that the robotic arm remained lightweight while operating within the capabilities of the selected actuators.
+
+---
+
+# Manufacturing & Assembly
+## Prototype Manufacturing
+Following the completion of the CAD model and torque analysis, a physical prototype was manufactured to validate the mechanical design. 
+
+The structural frame was made using standard 2020 and 3030 aluminium extrusions. Custom motor housings, mounting brackets and gripper componenets were initially manufactured using PLA through 3D printing. 
+
+The use of additive manufacturing allowed rapid iteration and enabled design verification before comitting to machining aluminium components. 
+
+---
+
+## Assembly Process
+
+The robotic arm was assembled progressively, beginning with the primary structural frame before integrating each motor. 
+
+The assembly process included:
+- Mounting the aluminium frame
+- Fitting custom motor housings
+- Installing all motors
+- Aligning each rotational joint
+- Verifying mehcanical clearances
+- Checking joint motion after each assembly stage
+
+Frequent test assemblies were performed throughout the process to ensure all components fit correctly before final manufacturing. 
+
+---
+
+## Manufacturing Challenges
+
+During the manufacturing stage, several issues appeared that were not immediately apparent during CAD development. <br>
+Some motor housings required redesign after discovering missing mounting holes and incorrect dimensional tolerances during assembly. <br>
+Rather than forcing holes so that the components could fit, the affected parts were redesigned, reprinted and tested aganin until the desired fit and functionality were achieved. <br>
+From those processes, the final mechanical design was significantly more detailed and accurate.
+
+---
+
+Future Manufacturing
+
+Once the PLA prototype has been fully validated, the custom components will be made from aluminium. 
+
+The transition to aluminium is expected to provide:
+- Increased structural rigidity
+- Improved durability
+- Higher load capacity
+- Better dimensional accuracy for competition use
+
+The aluminium version is currently planned as the final competition used assembly. 
+
+---
+
+
