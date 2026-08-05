@@ -1,4 +1,5 @@
 # Torque Analysis 
+
 ## Objective
 One of the most critical stages of the designing process was verifying whether or not the selected motors could support the robotic arm throughout its operating range. 
 
@@ -259,3 +260,16 @@ To achieve a dynamic safety factor of approximately **1.3×**, the wrist assembl
 This analysis directly influenced the final mechanical design and led to the decision to reduce the overall arm reach from **1.4 m** to **1.0 m**, ensuring that the robotic arm remained lightweight while operating within the capabilities of the selected actuators.
 
 
+## Motor Configuration
+
+Based of the torque calculations above, the following motors were selected for each joint. 
+
+| Joint | Motor |
+|--------|-------|
+| Waist | GIM8108-8 |
+| Shoulder | GIM4310-40 |
+| Elbow | GIM4310-40 |
+| Wrist Yaw | STS3215-12V |
+| Wrist Pitch | STS3215-12V |
+| Wrist Roll | STS3215-12V |
+| Gripper | STS3215-12V |
