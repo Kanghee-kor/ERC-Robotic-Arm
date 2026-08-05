@@ -108,7 +108,7 @@ For detailed engineering documentation, please refer to:
 - 📄 [Manufacturing & Assembly](manufacturing.md)
 - 📄 [Challenges & Solutions](challenges.md)
 - 📄 [Software Development](software.md)
-- 📄 [Engineering Workflow](Engineering_workflow.md)
+- 📄 [Engineering Workflow](engineering_workflow.md)
 ---
 
 
