@@ -12,7 +12,7 @@ Existing ERC robotic arms and published research on 6-DOF arms were studied to u
 An initial mechanical concept was developed to determine the overall geometry, joint arrangement and approximate dimensions of the robotic arm. The first design targeted a maximum reach of 1.4m to maximise the operational workspace. 
 
 ### 4. Motor Selection
-A list of candidate motors were created and evaluated by comparing torque output, weight, dimensions, operating voltage and overall suitability for each joints. The most appropriate motors were selected for the waist, shoulder, elbow, wrist joints and the gripper based on the inital design requirements. To see full list click here: [Motor Selection](motor_selection.md)
+A list of candidate motors were created and evaluated by comparing torque output, weight, dimensions, operating voltage and overall suitability for each joints. The most appropriate motors were selected for the waist, shoulder, elbow, wrist joints and the gripper based on the inital design requirements. To see full list click here: [Motor Selection](torque_analysis.md)
 
 ### 5. Torque Analysis
 Static torque analysis was performed for every joint to verify whether the selected motors could safel support the arm under maximum loading conditions, which in this tournament was 1kg. The analysis identified the wrist yaw joint as teh primary limiting factor. To see full analysis click here: [Torque Analysis](torque_analysis.md)
