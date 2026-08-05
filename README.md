@@ -99,15 +99,12 @@ Planned work includes:
 
 For detailed engineering documentation, please refer to:
 
+- 📄 [Engineering Workflow](engineering_workflow.md)
 - 📄 [System Specifications](system_specifications.md)
 - 📄 [Mechanical Design](mechanical_design.md)
-- 📄 [Overall Architecture](overall_architecture.md)
-- 📄 [CAD Development](cad_development.md)
 - 📄 [Torque Analysis & Motor Selection](torque_analysis.md)
 - 📄 [Manufacturing & Assembly](manufacturing.md)
-- 📄 [Challenges & Solutions](challenges.md)
 - 📄 [Software Development](software.md)
-- 📄 [Engineering Workflow](engineering_workflow.md)
 ---
 
 
