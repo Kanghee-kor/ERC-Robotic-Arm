@@ -99,16 +99,16 @@ Planned work includes:
 
 For detailed engineering documentation, please refer to:
 
-- 📄 [System Specifications](docs/system_specifications.md)
-- 📄 [Mechanical Design](docs/mechanical_design.md)
-- 📄 [Overall Architecture](docs/overall_architecture.md)
-- 📄 [CAD Development](docs/cad_development.md)
-- 📄 [Motor Selection](docs/motor_selection.md)
-- 📄 [Torque Analysis](docs/torque_analysis.md)
-- 📄 [Manufacturing & Assembly](docs/manufacturing.md)
-- 📄 [Challenges & Solutions](docs/challenges.md)
-- 📄 [Software Development](docs/software.md)
-
+- 📄 [System Specifications](system_specifications.md)
+- 📄 [Mechanical Design](mechanical_design.md)
+- 📄 [Overall Architecture](overall_architecture.md)
+- 📄 [CAD Development](cad_development.md)
+- 📄 [Motor Selection](motor_selection.md)
+- 📄 [Torque Analysis](torque_analysis.md)
+- 📄 [Manufacturing & Assembly](manufacturing.md)
+- 📄 [Challenges & Solutions](challenges.md)
+- 📄 [Software Development](software.md)
+- 📄 [Engineering Workflow](Engineering_workflow.md)
 ---
 
 
