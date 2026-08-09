@@ -100,8 +100,10 @@ The shoulder motor has to support the entire robotic arm together with the paylo
 | Payload | 1.000 | 1.400 |
 
 The total required torque is<br>
-`τ = (0.5329 x 9.81 x 0.225) + (1.4671 x 9.81 x 0.925) + (1.0 x 9.81 x 1.4)`<br>
-`τ  = 1.176 + 13.313 + 13.734`<br>
+```
+τ = (0.5329 x 9.81 x 0.225) + (1.4671 x 9.81 x 0.925) + (1.0 x 9.81 x 1.4)
+τ  = 1.176 + 13.313 + 13.734
+```
 **Required Torque = 28.223 Nm**
 | Motor Specification | Value |
 |---------------------|------:|
@@ -130,9 +132,10 @@ The following componets were removed from the calculations:
 
 The required holding torque becomes<br>
 
-`τ = (1.205724 × 9.81 × 0.475) + (1.0 × 9.81 × 0.95)`<br>
-
-`τ = 5.618 + 9.319`<br>
+```
+τ = (1.205724 × 9.81 × 0.475) + (1.0 × 9.81 × 0.95)
+τ = 5.618 + 9.319
+```
 
 **Required Torque = 14.937 Nm**
 
@@ -159,8 +162,10 @@ After removing all upstream components, only the wrist assembly and payload rema
 
 The required holding torque becomes<br>
 
-`τ = (0.05 × 9.81 × 0.1645) + (1.0 × 9.81 × 0.329)`<br>
-`τ = 0.081 + 3.227`<br>
+```
+τ = (0.05 × 9.81 × 0.1645) + (1.0 × 9.81 × 0.329)
+τ = 0.081 + 3.227
+```
 **Required Torque = 3.308 Nm**
 
 | Motor Specification | Value |
@@ -183,9 +188,10 @@ The calculated torque exceeds the peak torque capability of the selected motor, 
 
 The required holding torque becomes<br>
 
-`τ = (0.00625 × 9.81 × 0.0115) + (1.0 × 9.81 × 0.306)`<br>
-
-`τ = 0.0007 + 3.002`<br>
+```
+τ = (0.00625 × 9.81 × 0.0115) + (1.0 × 9.81 × 0.306)
+τ = 0.0007 + 3.002
+```
 
 **Required Torque = 3.003 Nm**
 
@@ -209,9 +215,10 @@ The motor operates almost exaclty at its maximum capability and would have littl
 
 The required holding torque becomes<br>
 
-`τ = (0.066235 × 9.81 × 0.0542) + (1.0 × 9.81 × 0.1975)`<br>
-
-`τ = 0.035 + 1.937`<br>
+```
+τ = (0.066235 × 9.81 × 0.0542) + (1.0 × 9.81 × 0.1975)
+τ = 0.035 + 1.937
+```
 
 **Required Torque = 1.972 Nm**
 
