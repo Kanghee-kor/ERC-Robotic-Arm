@@ -19,7 +19,7 @@ The mechanical structure is built from aluminium 2020 & 3030 extrusion, custom d
 
 The modular architecture means individual joints and components can be redesigned or replaced without affecting the rest of the system. This was a deliberate choice that paid off during the manufacturing stage, when several housings needed rework. Check here for more information: [Manufacturing & Assembly](manufacturing.md)
 
-`Place photo of complete CAD model of the arm`
+`Will Place a photo here when design is finsihed`
 
 ---
 
