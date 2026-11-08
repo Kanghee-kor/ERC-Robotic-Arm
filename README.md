@@ -48,8 +48,8 @@ The current phase of the project focuses on completing the mechanical system usi
 
 ---
 
-# My Role
-Throughout this project I have been resposible for:
+# My contribution
+Throughout this project I have participated for:
 
 - Leading the Robotic Arm Team
 - Mechanical Design
@@ -67,15 +67,15 @@ Throughout this project I have been resposible for:
 
 | Stage | Status |
 |---------|:------:|
-| Research & Concept Design | ✅ |
-| Motor Selection | ✅ |
-| Mechanical Design | ✅ |
-| CAD Development | ✅ |
-| Static Torque Analysis | ✅ |
-| PLA Prototype Manufacturing | 🚧 In Progress |
-| Aluminium Manufacturing | ⏳ Planned |
-| Software Integration | ⏳ Planned |
-| ERC Competition | ⏳ Upcoming |
+| Research & Concept Design | Done |
+| Motor Selection | Done |
+| Mechanical Design | Done |
+| CAD Development | Done |
+| Static Torque Analysis | Done |
+| PLA Prototype Manufacturing | In Progress |
+| Aluminium Manufacturing | Planned |
+| Software Integration | Planned |
+| ERC Competition | Upcoming |
 
 ---
 
