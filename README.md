@@ -1,5 +1,5 @@
 # ERC 2026 - 6-DOF Robotic Arm
-> **Role:** Robotic Arm Team Lead | Mechanical Design | CAD | Torque Analysis | Manufacturing
+> **Role:** Robotic Arm Team | Mechanical Design | CAD | Torque Analysis | Manufacturing
 
 ---
 
@@ -32,7 +32,7 @@ Software Integration
 ERC Competition
 ```
 
-As the Robot Arm Team Lead, I was responsible for leading the mechanical development of the arm, including motor selection, torque analysis, CAD design, manufacturing planning, technical documentation and project coordination.
+As the member of the Robot Arm Team, I participated in the mechanical development of the arm, including motor selection, torque analysis, CAD design, manufacturing planning, technical documentation and project coordination.
 
 The current phase of the project focuses on completing the mechanical system using aluminium structural components before integrating embedded softwa
 ---
