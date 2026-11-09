@@ -34,7 +34,7 @@ ERC Competition
 
 As the member of the Robot Arm Team, I participated in the mechanical development of the arm, including motor selection, torque analysis, CAD design, manufacturing planning, technical documentation and project coordination.
 
-The current phase of the project focuses on completing the mechanical system using aluminium structural components before integrating embedded softwa
+The current phase of the project focuses on completing the mechanical system using aluminium structural components before integrating embedded software
 ---
 
 # Project Highlights
