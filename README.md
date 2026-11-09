@@ -49,17 +49,15 @@ The current phase of the project focuses on completing the mechanical system usi
 ---
 
 # My contribution
-Throughout this project I have participated for:
+Throughout this project I have participated in:
 
-- Leading the Robotic Arm Team
 - Mechanical Design
 - Motor Selection
 - Static Torque Analysis
 - Complete CAD Design (Fusion 360)
 - Prototype Manufacturing
 - Technical Documentation
-- Purchasing & Component Selection
-- Project Planning
+
 
 ---
 
